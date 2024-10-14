@@ -55,9 +55,9 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/thao?createDatabaseIfNotExist=true");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/son?createDatabaseIfNotExist=true");
         dataSource.setUsername("root");
-        dataSource.setPassword("admin");
+        dataSource.setPassword("12345678");
         return dataSource;
     }
     //Cấu hình hibernate
@@ -85,7 +85,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")
-                .addResourceLocations("file:D:\\kiemtramd3\\src\\main\\webappp\\uploads\\");
+                .addResourceLocations("file:D:\\kiemtramd3\\Parttime-JV240603_LeHungSon\\src\\main\\webappp\\uploads\\");
     }
 
     @Override
